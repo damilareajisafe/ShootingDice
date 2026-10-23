@@ -35,11 +35,19 @@ smack.Play(player1);
 
 Console.WriteLine("-------------------");
 
+OneHigherPlayer oneUp = new OneHigherPlayer();
+oneUp.Name = "Oneupman";
+
+oneUp.Play(smack);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
 
 players.Add(smack);
+players.Add(oneUp);
 
 PlayMany(players);
 
