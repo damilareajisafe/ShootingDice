@@ -49,6 +49,13 @@ humanPlayer.Play(player2);
 
 Console.WriteLine("-------------------");
 
+CreativeSmackTalkingPlayer smack2 = new CreativeSmackTalkingPlayer();
+smack2.Name = "Deebo";
+
+smack2.Play(smack);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
@@ -56,6 +63,7 @@ List<Player> players = new List<Player>() {
 players.Add(smack);
 players.Add(oneUp);
 players.Add(humanPlayer);
+players.Add(smack2);
 
 PlayMany(players);
 

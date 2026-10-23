@@ -4,7 +4,7 @@ namespace ShootingDice;
 // A Player who shouts a taunt every time they roll dice
 public class SmackTalkingPlayer : Player
 {
-    public string Taunt { get; } = "feeel my wrath!";
+    public virtual string Taunt { get; } = "feeel my wrath!";
 
     public override int Roll()
     {
