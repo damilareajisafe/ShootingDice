@@ -42,12 +42,20 @@ oneUp.Play(smack);
 
 Console.WriteLine("-------------------");
 
+HumanPlayer humanPlayer = new HumanPlayer();
+humanPlayer.Name = "Roxy";
+
+humanPlayer.Play(player2);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
 
 players.Add(smack);
 players.Add(oneUp);
+players.Add(humanPlayer);
 
 PlayMany(players);
 
