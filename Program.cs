@@ -56,6 +56,20 @@ smack2.Play(smack);
 
 Console.WriteLine("-------------------");
 
+SoreLoserPlayer sucker = new SoreLoserPlayer();
+sucker.Name = "Henry";
+
+try
+{
+    sucker.Play(large);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex);
+}
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
@@ -64,6 +78,7 @@ players.Add(smack);
 players.Add(oneUp);
 players.Add(humanPlayer);
 players.Add(smack2);
+players.Add(sucker);
 
 PlayMany(players);
 
@@ -93,6 +108,14 @@ static void PlayMany(List<Player> players)
         // Make adjacent players play noe another
         Player player1 = shuffledPlayers[i];
         Player player2 = shuffledPlayers[i + 1];
-        player1.Play(player2);
+
+        try
+        {
+            player1.Play(player2);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
     }
 }

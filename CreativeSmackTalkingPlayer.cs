@@ -17,6 +17,7 @@ public class CreativeSmackTalkingPlayer : Player
     {
         string taunt = taunts[new Random().Next(0, taunts.Count)];
         Console.WriteLine($"{taunt}, {Name} taunts");
+        return base.Roll();
     }
 
 }
