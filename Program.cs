@@ -24,9 +24,22 @@ player1.Play(large);
 
 Console.WriteLine("-------------------");
 
+SmackTalkingPlayer smack = new SmackTalkingPlayer();
+smack.Name = "Brunn";
+
+large.Play(smack);
+
+Console.WriteLine("-------------------");
+
+smack.Play(player1);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
+
+players.Add(smack);
 
 PlayMany(players);
 
