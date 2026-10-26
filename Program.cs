@@ -59,6 +59,7 @@ Console.WriteLine("-------------------");
 SoreLoserPlayer sucker = new SoreLoserPlayer();
 sucker.Name = "Henry";
 
+
 try
 {
     sucker.Play(large);
@@ -67,6 +68,13 @@ catch (Exception ex)
 {
     Console.WriteLine(ex);
 }
+
+Console.WriteLine("-------------------");
+
+UpperHalfPlayer topBoy = new UpperHalfPlayer();
+topBoy.Name = "Lewis";
+
+topBoy.Play(player3);
 
 Console.WriteLine("-------------------");
 
@@ -79,6 +87,7 @@ players.Add(oneUp);
 players.Add(humanPlayer);
 players.Add(smack2);
 players.Add(sucker);
+players.Add(topBoy);
 
 PlayMany(players);
 
