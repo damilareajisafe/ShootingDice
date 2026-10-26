@@ -78,6 +78,13 @@ topBoy.Play(player3);
 
 Console.WriteLine("-------------------");
 
+SoreLoserUpperHalfPlayer cryBaby = new SoreLoserUpperHalfPlayer();
+cryBaby.Name = "Russell";
+
+cryBaby.Play(player2);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
     player1, player2, player3, large
 };
